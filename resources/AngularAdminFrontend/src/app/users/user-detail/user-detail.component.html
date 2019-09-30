@@ -1,0 +1,13 @@
+<section *ngIf="this.user != null">
+  <p>{{this.user.data.id}}/{{this.user.data.name}}</p>
+
+  <ul>
+    <li *ngFor="let rule of this.user.data.rules"><button (click)="this.deleteRule(rule.rule_id, rule.resource_type, rule.resource_id)">detach</button> {{rule.rule_id}} | {{rule.resource_type}}  |  {{rule.title}} | {{rule.allow}}</li>
+  </ul>
+  <section id="add-rule">
+    <input #typeText type="text" name="type" id="" placeholder="type of resource">
+    <input #nameText type="text" name="name" id="" placeholder="name of resource">
+    <app-toggle #allowToggle></app-toggle>
+    <button type="submit" (click)="this.addRule(typeText.value, nameText.value, allowToggle.value)">Add</button>
+  </section>
+</section>

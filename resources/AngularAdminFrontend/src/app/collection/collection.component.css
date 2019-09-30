@@ -1,0 +1,20 @@
+table{
+    width: 700px;
+    border-collapse: collapse;
+}
+
+td{
+    border: 1px solid lightgrey;
+    padding: 5px;
+}
+
+button{
+    height: 34px;
+    margin-left:2px;
+    float: right;
+}
+
+input{
+    width: 85%;
+}
+

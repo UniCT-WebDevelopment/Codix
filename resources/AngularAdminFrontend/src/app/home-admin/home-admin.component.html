@@ -1,0 +1,7 @@
+
+<p>Scansione</p>
+<span *ngIf="this.scanning">Scansione partita!</span>
+<span *ngIf="this.scanJob != null">{{this.scanJob.output}}</span>
+<span *ngIf="this.scanning">Questo è uno spinner piccolino</span>
+<button (click)="this.startScan()" [disabled]="this.scanning">Lancia nuova scansione</button>
+

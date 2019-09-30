@@ -1,0 +1,29 @@
+#togglable{
+  position: absolute;
+  background-color: whitesmoke;
+}
+
+
+
+table{
+  min-width: 1000px;
+  border: 1px solid lightgray;
+  border-collapse: collapse;
+}
+
+li, td{
+  height: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-top: 1px solid lightgrey;
+  border-bottom: 1px solid lightgrey;
+  margin-left: 10px;
+}
+
+li:hover, td:hover{
+  background-color: rgb(243, 243, 243);
+}
+
+td:hover app-toggle{
+  fill: darkcyan;
+}

@@ -1,0 +1,10 @@
+
+
+<table *ngIf="1 || this.comics != null;else spinner">
+  <p *ngIf="this.comics.data.length == 0">Non sono presenti comics</p>
+  <tr *ngFor="let comic of this.comics.data"><td><app-comic-detail [comic]=comic (refresh)="this.getComics()"></app-comic-detail></td></tr>
+</table>
+
+<ng-template #spinner>
+  <p>Questo è uno spinner</p>
+</ng-template>

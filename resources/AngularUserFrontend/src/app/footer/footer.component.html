@@ -1,0 +1,6 @@
+<footer>
+  <button (click)="this.pageFirst()"[disabled]="this.meta.current_page == 1"><<</button>
+  <button (click)="this.prevPage()" [disabled]="this.links.prev == null"><span><</span></button>
+  <button (click)="this.nextPage()" [disabled]="this.links.next == null"><span>></span></button>
+  <button (click)="this.pageLast()" [disabled]="this.meta.current_page == this.meta.last_page">>></button>
+</footer>

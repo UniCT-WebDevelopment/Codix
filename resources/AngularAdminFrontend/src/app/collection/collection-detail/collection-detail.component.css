@@ -1,0 +1,40 @@
+button{
+  background: none;
+  border: none;
+  float: right
+}
+#collectionable-container{
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+
+svg{
+  float: right;
+}
+
+.entry-container{
+  background-color: lightgrey;
+  border-radius: 7px;
+  overflow: hidden;
+  margin: 10px;
+  margin-left: 0px;
+  line-height: 30px;
+  display: inline-block;
+}
+span{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.entry-container > button{
+  float: left;
+  background-color: slategrey;
+  height: 30px;
+  padding: 0px;
+}
+
+ul{
+  list-style-type: none;
+  padding-left: 0px;
+}

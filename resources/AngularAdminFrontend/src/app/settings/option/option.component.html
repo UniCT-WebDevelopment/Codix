@@ -1,0 +1,18 @@
+<div id="option-container">
+
+
+<ng-container *ngIf="this.isString(option.value); then thenTemplate; else elseTemplate"></ng-container>
+<ng-template #thenTemplate>
+  <span>{{option.name}}</span>
+  <input #textBox type="text" name="" id="" value="{{option.value}}" (input)="this.update(textBox.value)">
+  <button type="button" [disabled]="!this.modified()" (click)="this.send()">Salva</button>
+</ng-template>
+<ng-template #elseTemplate>
+  <span class='flex-spacer'>{{option.name}}</span>
+  <app-toggle (toggle)="this.update($event); this.send()" class='flex-spacer' [value]=option.value [disable]=false></app-toggle>
+
+  <!--
+  <div (click)="this.update(!option.value)" style="display: inline; flex: 1">{{option.value}}</div>
+  -->
+</ng-template>
+</div>

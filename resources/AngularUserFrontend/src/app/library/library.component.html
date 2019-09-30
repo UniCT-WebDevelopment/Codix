@@ -1,0 +1,40 @@
+
+<ng-container *ngIf="this.isSearching(); then thenTemplate; else elseTemplate"></ng-container>
+<ng-template #thenTemplate>
+  <app-gallery id="reserch-container" [items]=this.resource$.data></app-gallery>
+</ng-template>
+<ng-template #elseTemplate>
+  <ng-container *ngIf="this.resources != null">
+    <ng-container *ngIf="true || this.type != 'cl' || this.id === ''; else elseCollectionTemplate">
+      <app-gallery [items]=this.resources.data ></app-gallery>
+      <app-footer [links]=this.resources.links [meta]=this.resources.meta (change)="this.changePage($event)"></app-footer>
+    </ng-container>
+    <ng-template #elseCollectionTemplate>
+      <section><h1>Comics</h1></section>
+      <app-gallery [items]=this.resources.data.comics></app-gallery>
+    </ng-template>
+  </ng-container>
+</ng-template>
+<!--
+<app-footer [current]=this.resources.links.current_page (next)="this.nextPage()" (prev)="this.prevPage()"></app-footer>
+-->
+
+
+<!--
+<ul>
+  <li *ngFor="let resource of this.resources">
+    <a [routerLink]="['/library', resource.type, resource.id]" routerLinkActive="router-link-active">
+      {{resource.type}}/{{resource.title}}</a>
+    </li>
+</ul>
+-->
+<!--<ng-template #elseTemplate>
+  <ng-container *ngIf="this.type != 'cl' || this.id === ''; else elseCollectionTemplate">
+      <app-gallery [items]=this.resources.data></app-gallery>
+  </ng-container>
+  <ng-template #elseCollectionTemplate>
+      <p *ngFor="let comic of this.resources.data.comics">{{comic.title}}</p>
+  </ng-template>
+
+
+</ng-template>-->

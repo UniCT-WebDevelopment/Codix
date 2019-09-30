@@ -1,0 +1,84 @@
+#reader-container{
+  background-color: black;
+  display: flex;
+  justify-content: center;
+}
+
+.overflow{
+  overflow-y: auto;
+}
+
+#reader-container > div{
+  position: absolute;
+}
+
+#button-container{
+  right: 0%;
+  top: 0%;
+  margin: 2em;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: auto;
+  opacity: 0.0;
+  border-radius: 10px;
+  background-color: black;
+}
+
+#button-container:hover{
+  opacity: 0.8;
+}
+
+#button-container > button{
+  margin: 1em;
+  border: none;
+  background: none;
+}
+
+#button-container svg{
+  width: 32px;
+  height: 32px;
+}
+
+#close-button{
+  background: transparent;
+  background-image: url('http://sparkideas.ca/wp-content/themes/spark-ideas-2018/images/close.png');
+  background-size: contain;
+}
+
+
+.layer{
+  bottom: 0%;
+  top: 0%;
+  left: 0%;
+  right: 0%;
+  position: fixed;
+}
+
+#controller{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+}
+
+#controller > div{
+  width: 100%;
+  height: 100%;
+}
+
+.width-fixed, .width-fixed *{
+  width: 100%;
+}
+
+.height-fixed, .height-fixed *{
+  height: 100%;
+}
+
+.fixed, .fixed *{
+  height: 100%;
+}
+
+img{
+  /*height: 100%;*/
+}

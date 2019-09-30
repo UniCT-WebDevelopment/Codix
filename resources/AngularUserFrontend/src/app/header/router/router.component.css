@@ -1,0 +1,22 @@
+div{
+  display: flex;
+  justify-content: center;
+  max-width: 760px;
+  margin: auto;
+  float: 1;
+}
+
+div > *{
+  flex: 1;
+}
+
+a{
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  margin: 1em;
+}
+
+.router-link-active{
+  border-bottom: 1px solid red;
+}

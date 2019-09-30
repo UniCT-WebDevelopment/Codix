@@ -1,0 +1,10 @@
+<ng-container *ngIf="this.options != null; else spinner">
+  <table>
+    <tr *ngFor="let option of this.options.data"><td><app-option [option]=option [crsf_token]=this.options.crsf_token [url]=this.options_group></app-option></td></tr>
+  </table>
+</ng-container>
+<ng-template #spinner>
+  <p>Questo è uno spinner!</p>
+</ng-template>
+
+

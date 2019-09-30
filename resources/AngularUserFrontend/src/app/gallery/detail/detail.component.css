@@ -1,0 +1,100 @@
+app-detail{
+  background-color: black;
+  opacity: 0.7;
+}
+#detail-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#detail-box{
+  border: 1px solid orangered;
+  border-radius: 10px;
+  width: 800px;
+  margin: auto;
+  margin-top: 15em;
+  display: grid;
+  grid-template-columns: 40% 55% 5%;
+  grid-column-gap: 20px;
+  overflow: hidden;
+  background-color: whitesmoke;
+}
+#detail-box > section{
+  grid-column-start: 1;
+  grid-column-end: 3;
+  margin: 5px;
+  margin-left: 20px;
+}
+#detail-content{
+  color: white;
+}
+
+h1, h2{
+  color: orangered;
+  line-height: 20px;
+  overflow: hidden;
+}
+h1{
+  line-height: 28px;
+}
+
+h2{
+  font-size: 16px;
+  font-weight: 400;
+}
+
+h3{
+  color: grey;
+  font-size: 14px;
+  font-weight: 100;
+  display: inherit;
+  margin-left: 2em;
+}
+
+.tag{
+  background-color: lightslategrey;
+  border-radius: 5px;
+  display: inline;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  margin-left: 5px;
+}
+
+.tag > h3{
+  color: white;
+  margin: 0px;
+}
+#description{
+  border-top: 1px solid darkgrey;
+  display: block;
+  overflow-y: auto;
+  width: 97%;
+  max-height: 200px;
+
+}
+img{
+  max-width: 100%;
+  max-height: 100%;
+  border-bottom: 1px solid orangered;
+  border-right: 1px solid orangered;
+}
+
+#close-button{
+  float: right;
+  margin-right: -1em;
+  margin-top: 0.5em;
+}
+svg{
+  fill: grey;
+}
+
+.layer{
+  bottom: 0%;
+  top: 0%;
+  left: 0%;
+  right: 0%;
+  position: fixed;
+}

@@ -1,0 +1,21 @@
+header{
+  display: flex;
+  background-color: royalblue;
+  align-items: center;
+  justify-content: space-between;
+
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOmTEJmL3diyi23QdakoS21onGoqBHnh3wxrO1WbWermoYAAjd');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
+
+
+
+header > div{
+  width: 300px;
+}
+
+svg{
+  margin: 5px;
+}

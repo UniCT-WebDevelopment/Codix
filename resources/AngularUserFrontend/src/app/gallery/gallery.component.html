@@ -1,0 +1,8 @@
+<app-detail *ngIf="this.detailService.show()"></app-detail>
+
+
+<div id="gallery">
+  <div *ngFor="let item of this.items">
+    <app-box [item]=item></app-box>
+  </div>
+</div>

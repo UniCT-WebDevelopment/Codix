@@ -1,0 +1,30 @@
+<div id="reader-container" class="layer"
+  [class.height-fixed]="this.fixed == 1"
+  [class.width-fixed]="this.fixed == 2"
+  [class.overflow]="this.fixed != 1">
+  <div>
+    <img src="{{this.images.data[this.i]}}">
+    <div id="controller" class="layer">
+      <div id="left" class="width-fixed height-fixed" (click)=this.prev()></div>
+      <div id="rigth" class="width-fixed height-fixed" (click)=this.next()></div>
+    </div>
+  </div>
+</div>
+
+<div id="button-container">
+  <button id="close-button" (click)='this.close()'>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
+  </button>
+  <button id="resize-button" (click)='this.adjust()'>
+    <svg *ngIf="this.fixed == 2" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24"><path d="M20 6.54v10.91c-2.6-.77-5.28-1.16-8-1.16-2.72 0-5.4.39-8 1.16V6.54c2.6.77 5.28 1.16 8 1.16 2.72.01 5.4-.38 8-1.16M21.43 4c-.1 0-.2.02-.31.06C18.18 5.16 15.09 5.7 12 5.7c-3.09 0-6.18-.55-9.12-1.64-.11-.04-.22-.06-.31-.06-.34 0-.57.23-.57.63v14.75c0 .39.23.62.57.62.1 0 .2-.02.31-.06 2.94-1.1 6.03-1.64 9.12-1.64 3.09 0 6.18.55 9.12 1.64.11.04.21.06.31.06.33 0 .57-.23.57-.63V4.63c0-.4-.24-.63-.57-.63z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
+    <svg *ngIf="this.fixed == 1" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24"><path d="M19.94 21.12c-1.1-2.94-1.64-6.03-1.64-9.12 0-3.09.55-6.18 1.64-9.12.04-.11.06-.22.06-.31 0-.34-.23-.57-.63-.57H4.63c-.4 0-.63.23-.63.57 0 .1.02.2.06.31C5.16 5.82 5.71 8.91 5.71 12c0 3.09-.55 6.18-1.64 9.12-.05.11-.07.22-.07.31 0 .33.23.57.63.57h14.75c.39 0 .63-.24.63-.57-.01-.1-.03-.2-.07-.31zM6.54 20c.77-2.6 1.16-5.28 1.16-8 0-2.72-.39-5.4-1.16-8h10.91c-.77 2.6-1.16 5.28-1.16 8 0 2.72.39 5.4 1.16 8H6.54z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
+    <svg *ngIf="this.fixed == 0" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 6c2.45 0 4.71.2 7.29.64.47 1.78.71 3.58.71 5.36 0 1.78-.24 3.58-.71 5.36-2.58.44-4.84.64-7.29.64s-4.71-.2-7.29-.64C4.24 15.58 4 13.78 4 12c0-1.78.24-3.58.71-5.36C7.29 6.2 9.55 6 12 6m0-2c-2.73 0-5.22.24-7.95.72l-.93.16-.25.9C2.29 7.85 2 9.93 2 12s.29 4.15.87 6.22l.25.89.93.16c2.73.49 5.22.73 7.95.73s5.22-.24 7.95-.72l.93-.16.25-.89c.58-2.08.87-4.16.87-6.23s-.29-4.15-.87-6.22l-.25-.89-.93-.16C17.22 4.24 14.73 4 12 4z"/></svg>
+  </button>
+</div>
+
+
+
+<!--
+<p>reader works!</p>
+<p *ngFor="let image of this.images.data" >{{image}}</p>
+-->
