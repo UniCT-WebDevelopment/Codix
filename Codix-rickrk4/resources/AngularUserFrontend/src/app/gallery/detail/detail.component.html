@@ -1,0 +1,35 @@
+<div class="layer" style="background-color: black; opacity: 0.7"></div>
+  <div class="layer">
+  <div id="detail-box">
+    <div id="detail-content">
+      <img src="{{this.detailService.resource.coverUrl}}" alt="">
+    </div>
+    <div id="detail-content">
+        <button id="close-button" (click)='this.close()'>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
+        </button>
+      <section><h1>{{this.detailService.resource.title}}</h1>
+        </section>
+      <section><h2>Autori</h2></section>
+      <section>
+          <section *ngIf="this.isEmpty(this.detailService.resource.authors)"><h3>Non sono registrati authors</h3></section>
+          <div (click)="this.searchService.search('artist=' + author.id); this.close()" *ngFor="let author of this.detailService.resource.authors" class="tag"><h3>{{author.name}}</h3></div>
+      </section>
+
+      <section><h2>Pubblicazioni</h2></section>
+      <section>
+        <section *ngIf="this.isEmpty(this.detailService.resource.publishers)"><h3 style="color: gray">Non sono registrati publishers</h3></section>
+        <section (click)="this.searchService.search('publisher=' + publisher.id); this.close()" *ngFor="let publisher of this.detailService.resource.publishers" class="tag"><h3>{{publisher.name}}</h3></section>
+      </section>
+
+<!--
+      <section *ngIf="this.detailService.resource.user_tags !== null">
+        <section><h2>Keywords{{this.detailService.resource.user_tags.keywords[0]}}</h2></section>
+        <section *ngIf="this.isEmpty(this.detailService.resource.user_tags.keywords)"><h3 style="color: gray">Non sono registrati tags</h3></section>
+        <section (click)="this.searchService.search('q=' + tag); this.close()" *ngFor="let tag of this.detailService.resource.user_tags.keywords" class="tag"><h3>{{tag}}</h3></section>
+      </section>
+-->
+    </div>
+      <section id="description"><h3></h3></section>
+  </div>
+</div>

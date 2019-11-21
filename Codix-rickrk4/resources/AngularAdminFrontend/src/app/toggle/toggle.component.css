@@ -1,0 +1,23 @@
+button{
+  float: inherit;
+  background: none;
+  border: none;
+  overflow: hidden;
+  margin: 0px;
+  padding: 0px;
+}
+svg{
+  height: 50px;
+}
+
+.disabled{
+  fill: lightgray;
+}
+
+.up{
+  fill: black;
+}
+
+.down{
+  fill: lightgreen;
+}

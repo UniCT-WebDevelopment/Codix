@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+*{
+  font-family: 'Roboto', sans-serif;
+}
+
+body{
+  padding: 0px;
+  margin: 0px;
+}
+
+
+.first-icon-color{
+  fill: lightgreen;
+}
+
+.second-icon-color, .first-icon-color:hover{
+  fill: darkcyan;
+}
+
+.first-background-color{
+  background-color: lightgreen;
+}
+
+.second-background-color{
+  background-color: darkcyan;
+}
+
+.first-border-color{
+  border-color: lightgray;
+}

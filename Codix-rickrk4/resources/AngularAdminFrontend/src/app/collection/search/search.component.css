@@ -1,0 +1,15 @@
+#results-container{
+  background: white;
+  position: absolute;
+}
+
+#results-container > div{
+  border: 1px solid lightgray;
+  border-top: none;
+  padding: 5px;
+}
+
+#results-container > div:hover{
+  background: darkcyan;
+  color: white;
+}

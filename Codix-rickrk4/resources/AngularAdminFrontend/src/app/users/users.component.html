@@ -1,0 +1,20 @@
+<p>users works!</p>
+<ul *ngIf="this.users != null">
+  <li *ngFor="let user of this.users.data"><app-user-detail [id]=user.id></app-user-detail></li>
+</ul>
+
+<div>
+  <div id="name-container">
+    Username: <input #nameText type="text" name="name" placeholder="name" required autofocus autocomplete="name">
+  </div>
+  <div id="email-container">
+    Email: <input #emailText type="email" name="email" placeholder="email" autocomplete="email">
+  </div>
+  <div id="password-container">
+    Passowrd: <input #passwordText type="password" name="password" placeholder="password" required autocomplete="new-password">
+  </div>
+  <div id="confirm-password-container">
+    Confirm Passowrd: <input #confirmPasswordText type="password" name="password_confirmation" placeholder="confirm password" required autocomplete="new-password">
+  </div>
+  <button (click)="this.registerUser(nameText.value, passwordText.value, confirmPasswordText.value, emailText.value)">Register</button>
+</div>

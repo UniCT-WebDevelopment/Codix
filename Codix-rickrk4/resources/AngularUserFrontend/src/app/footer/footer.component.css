@@ -1,0 +1,15 @@
+button{
+  background-color: lightgray;
+  border-radius: 25px;
+  width: 30px;
+  height: 30px;
+  margin-bottom: 1em;
+}
+footer{
+  position: absolute;
+  bottom: 2em;
+  left: 0px;
+  right: 0px;
+  display: flex;
+  justify-content: center;
+}

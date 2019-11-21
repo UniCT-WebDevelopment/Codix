@@ -1,0 +1,13 @@
+
+<input #searchBox type="text" (input)="this.search(searchBox.value)" placeholder={{this.placeholder}}>
+<button *ngIf="this.insert" (click)="this.select(searchBox.value); searchBox.value = ''">Save</button>
+
+
+
+<div *ngIf="this.resources$ != undefined" id="results-container">
+  <div *ngFor="let comic of this.resources$.data" (click)="this.select(comic.id); searchBox.value = ''">{{comic.title}}{{comic.name}}</div>
+</div>
+
+<!--
+<p *ngFor="let test of this.resources$.data">{{test.title}}</p>
+-->

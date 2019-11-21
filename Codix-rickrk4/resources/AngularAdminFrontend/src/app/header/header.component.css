@@ -1,0 +1,17 @@
+header{
+  background-color: #2b2b2b;
+  fill: #2b2b2b;
+  height: 50px;
+
+  display: flex;
+  /*
+  justify-content: center;
+  */
+}
+
+svg{
+  fill: white;
+  right: 0px;
+  position: absolute;
+  margin: 8px;
+}

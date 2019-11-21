@@ -1,0 +1,15 @@
+#main-container{
+
+  position: absolute;
+  width: 100%;
+  margin: auto;
+  bottom: 0%;
+  top: 50px;
+  overflow-y: auto;
+  display: flex;
+  justify-content: center;
+}
+
+app-settings{
+  width: 70%;
+}

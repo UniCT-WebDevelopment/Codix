@@ -1,0 +1,46 @@
+#option-container{
+  display: flex;
+  align-items: center;
+}
+button, app-toggle{
+  float: right;
+}
+
+button{
+  background: royalblue;
+  border: none;
+  border-radius: 7px;
+  padding: 7px;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: white;
+}
+
+button:hover{
+  background: #3149c1;
+}
+
+
+
+input{
+  margin: auto;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  width: 235px;
+  height: 30px;
+  padding-left: 8px;
+}
+
+input:hover{
+  border: 1px solid lightgreen;
+
+}
+
+input:focus{
+  border: 1px solid #3149c1;
+
+}
+
+.flex-spacer{
+  flex: 1;
+}

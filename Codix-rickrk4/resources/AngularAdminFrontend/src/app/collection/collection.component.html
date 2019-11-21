@@ -1,0 +1,25 @@
+<br>
+
+
+
+<table>
+  <ng-container *ngIf="this.collections != null; else spinner">
+    <p *ngIf="this.collections.data.length == 0">Non sono presenti collezioni</p>
+    <tr *ngFor="let collection of this.collections.data"><td><app-collection-detail [name]="collection.title" [id]="collection.id" [trashed]="collection.deleted_at !== null" (refresh)="this.getCollections()"></app-collection-detail></td></tr>
+  </ng-container>
+  <ng-template #spinner>
+    <p>questo è uno spinner</p>
+  </ng-template>
+  <tr><td>
+    <input #titleBox type="text" name="" id="">
+    <button (click)="this.createCollection(titleBox.value); titleBox.value = ''"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/><path d="M0 0h24v24H0z" fill="none"/></svg></button>
+  </td></tr>
+</table>
+
+<!--
+<ul>
+  <li *ngFor="let collection of this.collections.data"><app-collection-detail [name]="collection.name" [id]="collection.id" [trashed]="collection.deleted_at !== null"></app-collection-detail></li>
+</ul>
+<input #titleBox type="text" name="" id="">
+<button (click)=this.createCollection(titleBox.value)>Send</button>
+-->
